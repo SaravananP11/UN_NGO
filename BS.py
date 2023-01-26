@@ -77,18 +77,54 @@ for row in reader:
             lang = table.find('td', text="Languages:").find_next_sibling("td").text
         except:
             lang = ""
-        firstWorksheet.cell(row=i + 1, column=1, value=on)
-        firstWorksheet.cell(row=i + 1, column=2, value=one)
-        firstWorksheet.cell(row=i + 1, column=3, value=oa)
-        firstWorksheet.cell(row=i + 1, column=4, value=oae)
-        firstWorksheet.cell(row=i + 1, column=5, value=fn)
-        firstWorksheet.cell(row=i + 1, column=6, value=add)
-        firstWorksheet.cell(row=i + 1, column=7, value=ph)
-        firstWorksheet.cell(row=i + 1, column=8, value=fax)
-        firstWorksheet.cell(row=i + 1, column=9, value=em)
-        firstWorksheet.cell(row=i + 1, column=10, value=web)
-        firstWorksheet.cell(row=i + 1, column=11, value=ot)
-        firstWorksheet.cell(row=i + 1, column=12, value=lang)
+        try:
+            firstWorksheet.cell(row=i + 1, column=1, value=on)
+        except:
+            firstWorksheet.cell(row=i + 1, column=1, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=2, value=one)
+        except:
+            firstWorksheet.cell(row=i + 1, column=2, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=3, value=oa)
+        except:
+            firstWorksheet.cell(row=i + 1, column=3, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=4, value=oae)
+        except:
+            firstWorksheet.cell(row=i + 1, column=4, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=5, value=fn)
+        except:
+            firstWorksheet.cell(row=i + 1, column=5, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=6, value=add)
+        except:
+            firstWorksheet.cell(row=i + 1, column=6, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=7, value=ph)
+        except:
+            firstWorksheet.cell(row=i + 1, column=7, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=8, value=fax)
+        except:
+            firstWorksheet.cell(row=i + 1, column=8, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=9, value=em)
+        except:
+            firstWorksheet.cell(row=i + 1, column=9, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=10, value=web)
+        except:
+            firstWorksheet.cell(row=i + 1, column=10, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=11, value=ot)
+        except:
+            firstWorksheet.cell(row=i + 1, column=11, value="")
+        try:
+            firstWorksheet.cell(row=i + 1, column=12, value=lang)
+        except:
+            firstWorksheet.cell(row=i + 1, column=12, value="")
         i += 1
         # print(on, one, oa, oae, fn, add, ph, fax, em, web, ot, lang)
         print(f"{i}: {on}")
